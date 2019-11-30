@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ProductDetail">
+
+    <ImageView
+        android:id="@+id/productDetail_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="250dp"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:tint="#6F000000"
+        android:src="@drawable/suonreal"/>
+    <LinearLayout
+        android:id="@+id/productDetail_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetail_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/productDetail_prodName"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:layout_marginRight="20dp"
+                android:maxLines="3"
+                android:text="Product namea is so hecking long"/>
+            <TextView
+                android:id="@+id/productDetail_prodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="00.000"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/productDetail_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSubText"
+            android:text="descripttion"/>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp">
+            <TextView
+                android:id="@+id/productDetail_Note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:layout_marginRight="10dp"
+                android:maxLines="3"
+                android:text="Special Note"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textStyle="normal"
+                android:text="Not required"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/productDetail_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notes here"/>
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/productDetail_amount_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:textSize="10dp"
+            app:initialNumber="1"
+            app:finalNumber="10"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            >
+
+        </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+    </LinearLayout>
+    <Button
+        android:id="@+id/productDetail_addCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginBottom="5dp"
+        android:hint="Add cart"/>
+</RelativeLayout>

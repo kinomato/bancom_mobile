@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "663584312504",
+    "firebase_url": "https://bancom-mobile.firebaseio.com",
+    "project_id": "bancom-mobile",
+    "storage_bucket": "bancom-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663584312504:android:dca1562385bcc10da7b84d",
+        "android_client_info": {
+          "package_name": "com.example.bancom_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663584312504-ch381t96cn7sgj6ohnti1aau3mihuk2p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bancom_mobile",
+            "certificate_hash": "24e8b603d28d0d757860919c484023aa77424b09"
+          }
+        },
+        {
+          "client_id": "663584312504-ki91i1ahecei7r8dag884rgfqca213g5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnyKA1-rVvnmKVTTAoAY7uBNnM_RiCtX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663584312504-ki91i1ahecei7r8dag884rgfqca213g5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
