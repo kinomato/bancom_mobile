@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/productDetail_image"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:maxHeight="250dp"
-        android:scaleType="fitStart"
+        android:maxHeight="150dp"
+        android:scaleType="centerCrop"
         android:adjustViewBounds="true"
         android:tint="#6F000000"
         android:src="@drawable/suonreal"/>
