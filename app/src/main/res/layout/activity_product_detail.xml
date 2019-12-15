@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
 
     tools:context=".ProductDetail">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
 
     <ImageView
         android:id="@+id/productDetail_image"
@@ -57,7 +62,7 @@
             android:textStyle="bold"
             android:textColor="@color/colorSubText"
             android:text="descripttion"/>
-        <LinearLayout
+        <!--<LinearLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,12 +83,12 @@
                 android:textSize="13dp"
                 android:textStyle="normal"
                 android:text="Not required"/>
-        </LinearLayout>
-        <EditText
+        </LinearLayout>-->
+        <!--<EditText
             android:id="@+id/productDetail_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Notes here"/>
+            android:hint="Notes here"/>-->
         <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
             android:id="@+id/productDetail_amount_btn"
             android:layout_width="wrap_content"

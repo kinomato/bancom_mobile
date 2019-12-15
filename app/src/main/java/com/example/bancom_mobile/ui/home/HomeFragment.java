@@ -22,6 +22,8 @@ import com.example.bancom_mobile.R;
 import com.example.bancom_mobile.ViewHolder.ProductViewHolder;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.firebase.ui.firestore.SnapshotParser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.squareup.picasso.Picasso;
@@ -58,7 +60,19 @@ public class HomeFragment extends Fragment {
                 .orderBy("name", Query.Direction.ASCENDING);
         FirestoreRecyclerOptions<Products> options =
                 new FirestoreRecyclerOptions.Builder<Products>()
-                        .setQuery(query,Products.class)
+                        .setQuery(query, new SnapshotParser<Products>() {
+                            @NonNull
+                            @Override
+                            public Products parseSnapshot(@NonNull DocumentSnapshot snapshot) {
+                                Products products = new Products();
+                                products.setId(snapshot.getId());
+                                products.setName(snapshot.getString("name"));
+                                products.setDescription(snapshot.get("description").toString());
+                                products.setPrice(snapshot.getString("price"));
+                                products.setImage(snapshot.getString("image"));
+                                return products;
+                            }
+                        })
                         .build();
 
 
@@ -76,6 +90,7 @@ public class HomeFragment extends Fragment {
                             @Override
                             public void onClick(View v) {
                                 Intent intent = new Intent(getActivity(), ProductDetail.class);
+                                intent.putExtra("prodId",model.getId());
                                 intent.putExtra("prodName",model.getName());
                                 intent.putExtra("prodPrice",model.getPrice());
                                 intent.putExtra("prodDescription",model.getDescription());

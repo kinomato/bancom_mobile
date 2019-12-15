@@ -1,19 +1,19 @@
 package com.example.bancom_mobile.Model;
 
-public class Products {
+public class CartItem {
+    private String id,name, description,price, image;
+    private Integer quantity;
 
-   private String id,name, description,price, image;
-
-    public Products() {
-
+    public CartItem() {
     }
 
-    public Products(String id,String name, String description, String price, String image) {
-        this.id=id;
+    public CartItem(String id, String name, String description, String price, String image, Integer quantity) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.image = image;
+        this.quantity = quantity;
     }
 
     public String getId() {
@@ -54,5 +54,13 @@ public class Products {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 }
