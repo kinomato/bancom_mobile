@@ -76,8 +76,7 @@ public class HomeFragment extends Fragment {
                         .build();
 
 
-        adapter =
-                new FirestoreRecyclerAdapter<Products, ProductViewHolder>(options) {
+        adapter = new FirestoreRecyclerAdapter<Products, ProductViewHolder>(options) {
                     @Override
                     protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model) {
 

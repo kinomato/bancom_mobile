@@ -3,6 +3,7 @@ package com.example.bancom_mobile;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -84,6 +85,8 @@ public class ProductDetail extends AppCompatActivity {
         tempCart.add(cartItem);
         Paper.book().write("cart", tempCart);
         Toast.makeText(this, "Added to cart", Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(ProductDetail.this,HomeActivity.class);
+        startActivity(intent);
 
     }
 

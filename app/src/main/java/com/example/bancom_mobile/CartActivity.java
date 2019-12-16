@@ -8,9 +8,11 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -40,6 +42,7 @@ public class CartActivity extends AppCompatActivity {
     private CartItemAdapter cartItemAdapter;
     private ItemClickListener listener;
     private CartViewModel cartViewModel;
+    private String price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +68,20 @@ public class CartActivity extends AppCompatActivity {
         cartViewModel.getmTotalPrice().observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
-                txtTotalPrice.setText(currencyFormat(integer.toString()));
+                price = integer.toString();
+                txtTotalPrice.setText(currencyFormat(price));
+            }
+        });
+
+        nextProcessBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Prevalent.cartTotalPrice == 0){
+                    return;
+                }
+                Intent intent= new Intent(CartActivity.this,ConfirmOrderActivity.class);
+                intent.putExtra("price",price);
+                startActivity(intent);
             }
         });
 

@@ -20,4 +20,19 @@
     <string name="menu_logout">Logout</string>
     <string name="menu_profile">Profile</string>
 
+
+    <string name="confirm_name">Your name</string>
+    <string name="confirm_phone">Your phone number</string>
+    <string name="confirm_address">Your address</string>
+    <string name="confirm_city">Your city name</string>
+    <string name="confirm_order">Confirm your order to process checkout</string>
+    <string name="confirm_info">Shipment info</string>
+    <string name="confirm_total_text">Total:</string>
+    <string name="confirm_checkout_btn">Confirm</string>
+
+
+    <string name="order_total_text">Total</string>
+
+
+
 </resources>
