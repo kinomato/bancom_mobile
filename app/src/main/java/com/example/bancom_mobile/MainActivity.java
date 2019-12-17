@@ -79,18 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         DocumentReference docRef = db.collection("Users").document(phone);
-        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
 
-            }
-        });
-        docRef.get().addOnCanceledListener(new OnCanceledListener() {
-            @Override
-            public void onCanceled() {
-
-            }
-        });
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {

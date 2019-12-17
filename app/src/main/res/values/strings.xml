@@ -33,6 +33,7 @@
 
     <string name="order_total_text">Total</string>
 
+    <string name="order_product_quantity">Quantity:</string>
 
 
 </resources>

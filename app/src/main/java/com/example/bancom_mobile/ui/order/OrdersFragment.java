@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 
 import com.example.bancom_mobile.Model.Order;
 import com.example.bancom_mobile.Model.Products;
+import com.example.bancom_mobile.OrderProductActivity;
 import com.example.bancom_mobile.Prevalent.Prevalent;
 import com.example.bancom_mobile.ProductDetail;
 import com.example.bancom_mobile.R;
@@ -93,7 +94,7 @@ public class OrdersFragment extends Fragment {
                 holder.cardView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), ProductDetail.class);
+                        Intent intent = new Intent(getActivity(), OrderProductActivity.class);
                         intent.putExtra("orderId",model.getId());
                         intent.putExtra("orderUid",model.getUid());
                         startActivity(intent);
